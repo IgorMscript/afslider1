@@ -1,0 +1,68 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+.slider {
+	width: 1200px;
+	height: 600px;
+	position: relative;
+	background-color: gray;
+}
+
+.slider__before {
+	width: 600px;
+	height: 600px;
+	position: absolute;
+	z-index: 2;
+	background: url(./images/before.jpg) no-repeat center fixed;
+	background-size: cover;
+}
+
+.slider__after {
+	width: 1200px;
+	height: 600px;
+	position: absolute;
+	background: url(./images/after.jpg) no-repeat center fixed;
+	background-size: cover;
+}
+
+.slider__resize {
+	width: 5px;
+	position: absolute;
+	height: 100%;
+	right: 0;
+	top: 0;
+	background-color: #fff;
+	cursor: e-resize;
+}
+
+.slider__resize::after {
+	content: '▶';
+	position: absolute;
+	font-size: 30px;
+	font-weight: 900;
+	top: 50%;
+	left: 5px;
+	color: #fff;
+
+}
+
+.slider__resize::before {
+	content: '◀';
+	position: absolute;
+	font-size: 30px;
+	font-weight: 900;
+	top: 50%;
+	right: 5px;
+	color: #fff;
+}
